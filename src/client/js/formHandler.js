@@ -1,16 +1,20 @@
 function handleSubmit(event) {
   event.preventDefault();
 
-  // check what text was put into the form field
-  let formText = document.getElementById("name").value;
-  Client.checkForName(formText);
+  const formUrl = document.getElementById("url").value;
+  // TODO: url validation
 
   console.log("::: Form Submitted :::");
-  fetch("http://localhost:3001/test")
+  fetch("http://localhost:8081/article", {
+    method: "POST",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ url: formUrl })
+  })
     .then(res => res.json())
-    .then(function(res) {
-      document.getElementById("results").innerHTML = res.message;
-    });
+    .then(res => console.log(res));
 }
 
 export { handleSubmit };
