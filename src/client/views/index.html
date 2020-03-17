@@ -17,16 +17,34 @@
     </header>
 
     <main>
+      <h1>Evaluate a News Article with Natural Language Processing</h1>
       <section>
-        <form class="" onsubmit="return Client.handleSubmit(event)">
-          <input id="url" type="url" name="input" value="" placeholder="Input URL">
-          <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+        <form onsubmit="return Client.handleSubmit(event)">
+          <input id="url" type="url" placeholder="Please type URL of an article">
+          <button>Evaluate</button>
         </form>
       <section>
 
       <section>
-        <strong>Form Results:</strong>
-        <div id="results"></div>
+        <h2>NLP analysis:</h2>
+        <ul>
+          <li id="polarity">
+            <strong>Polarity:</strong>
+          </li>
+          <li id="subjectivity">
+            <strong>Subjectivity:</strong>
+          </li>
+          <li id="polarity_confidence">
+            <strong>Polarity confidence:</strong>
+          </li>
+          <li id="subjectivity_confidence">
+            <strong>Subjectivity confidence:</strong>
+          </li>
+          <li id="text">
+            <strong>Text:</strong>
+            <blockquote></blockquote>
+          </li>
+        </ul>
       </section>
     </main>
 
