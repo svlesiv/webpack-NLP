@@ -24,25 +24,31 @@
           <button>Evaluate</button>
         </form>
       <section>
+      
+      <div id="loading"></div>
 
-      <section>
+      <section class="results" id="results">
         <h2>NLP analysis:</h2>
         <ul>
-          <li id="polarity">
+          <li>
             <strong>Polarity:</strong>
+            <span id="polarity"></span>
           </li>
-          <li id="subjectivity">
+          <li>
             <strong>Subjectivity:</strong>
+            <span id="subjectivity"></span>
           </li>
-          <li id="polarity_confidence">
+          <li>
             <strong>Polarity confidence:</strong>
+            <span id="polarity_confidence"></span>
           </li>
-          <li id="subjectivity_confidence">
+          <li>
             <strong>Subjectivity confidence:</strong>
+            <span id="subjectivity_confidence"></span>
           </li>
-          <li id="text">
+          <li>
             <strong>Text:</strong>
-            <blockquote></blockquote>
+            <blockquote id="text"></blockquote>
           </li>
         </ul>
       </section>
