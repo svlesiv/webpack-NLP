@@ -20,12 +20,13 @@
       <h1>Evaluate a News Article with Natural Language Processing</h1>
       <section>
         <form onsubmit="return Client.handleSubmit(event)">
-          <input id="url" type="url" placeholder="Please type URL of an article">
+          <input id="url" type="text" placeholder="Please type URL of an article">
           <button>Evaluate</button>
         </form>
       <section>
       
       <div id="loading"></div>
+      <div id="error"></div>
 
       <section class="results" id="results">
         <h2>NLP analysis:</h2>

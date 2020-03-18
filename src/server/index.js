@@ -41,7 +41,6 @@ app.get("/", function(req, res) {
 
 // Post Route.
 app.post("/article", (req, res) => {
-  console.log(req.body.url);
   textapi.sentiment({ url: req.body.url }, (error, response) => {
     if (error === null) {
       res.send(response);

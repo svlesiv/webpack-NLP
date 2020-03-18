@@ -1,4 +1,4 @@
-function handleSubmit(event) {
+export const handleSubmit = event => {
   event.preventDefault();
 
   const formUrlElementValue = document.getElementById("url").value;
@@ -13,10 +13,18 @@ function handleSubmit(event) {
   const textElement = document.getElementById("text");
   const loadingElement = document.getElementById("loading");
   const resultsElement = document.getElementById("results");
+  const errorElement = document.getElementById("error");
 
+  // URL validation
+  const errorMessage = Client.validateURL(formUrlElementValue);
+  if (errorMessage) {
+    errorElement.innerHTML = errorMessage;
+    window.setTimeout(() => (errorElement.innerHTML = ""), 2000);
+    return;
+  }
+
+  // Display Loading text after form submission.
   loadingElement.innerHTML = "...Loading";
-
-  // TODO: url validation
 
   console.log("::: Form Submitted :::");
   fetch("http://localhost:8081/article", {
@@ -37,8 +45,8 @@ function handleSubmit(event) {
         text
       } = res;
 
-      loadingElement.style.display = 'none';
-      resultsElement.style.display = 'block';
+      loadingElement.style.display = "none";
+      resultsElement.style.display = "block";
 
       polarityElement.innerHTML = polarity;
       subjectivityElement.innerHTML = subjectivity;
@@ -47,6 +55,4 @@ function handleSubmit(event) {
       textElement.innerHTML = text;
       textElement.setAttribute("cite", formUrlElement);
     });
-}
-
-export { handleSubmit };
+};
