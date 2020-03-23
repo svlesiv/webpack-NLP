@@ -16,7 +16,7 @@ export const handleSubmit = event => {
   const resultsElement = document.getElementById("results");
   const errorElement = document.getElementById("error");
 
-  // URL validation
+  // URL validation.
   const errorMessage = Client.validateURL(formUrlElementValue);
   if (errorMessage) {
     errorElement.innerHTML = errorMessage;
@@ -46,9 +46,11 @@ export const handleSubmit = event => {
         text
       } = res;
 
+      // Hide loading, and show results section.
       loadingElement.style.display = "none";
       resultsElement.style.display = "block";
 
+      // Modify DOM elements with response values.
       polarityElement.innerHTML = polarity;
       subjectivityElement.innerHTML = subjectivity;
       polarityConfidenceElement.innerHTML = polarity_confidence;
