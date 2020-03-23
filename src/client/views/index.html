@@ -2,34 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>NLP</title>
   </head>
 
   <body>
-
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div>
+      <h1>Evaluate a News Article with Natural Language Processing</h1>
     </header>
 
     <main>
-      <h1>Evaluate a News Article with Natural Language Processing</h1>
       <section>
         <form onsubmit="return Client.handleSubmit(event)">
-          <input id="url" type="text" placeholder="Please type URL of an article">
+          <input id="url" type="text" placeholder="Please type URL of an article" autofocus>
           <button>Evaluate</button>
         </form>
       <section>
       
       <div id="loading"></div>
-      <div id="error"></div>
+      <div id="error" class="error"></div>
 
       <section class="results" id="results">
-        <h2>NLP analysis:</h2>
         <ul>
           <li>
             <strong>Polarity:</strong>
@@ -56,7 +48,7 @@
     </main>
 
     <footer>
-      <p>This is a footer</p>
+      <p>&copy; 2020 Svitlana Lesiv</p>
     </footer>
 
   </body>

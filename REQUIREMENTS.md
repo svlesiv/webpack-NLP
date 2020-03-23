@@ -1,6 +1,6 @@
 # Project Requirements:
 
-### Your project must:
+### Project must:
 
 - [ ] Be set up with Webpack, Express, Node, and Sass, and Service Workers
 
@@ -19,5 +19,3 @@
 - [ ] Response from the API must be added to the view for a user to see 
 
 - [ ] Be able to show content offline
-
-All of these requirements are explained throughout the course. Specifics on setting up the Aylien API are found in the README file of this repo.

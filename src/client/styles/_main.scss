@@ -1,0 +1,12 @@
+main {
+  flex: 2;
+
+  section {
+    max-width: 800px;
+    margin-top: 5vh;
+
+    &.results {
+      display: none;
+    }
+  }
+}

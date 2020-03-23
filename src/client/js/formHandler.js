@@ -1,7 +1,8 @@
 export const handleSubmit = event => {
   event.preventDefault();
 
-  const formUrlElementValue = document.getElementById("url").value;
+  const formUrlElementValue = event.target.elements[0].value;
+
   const polarityElement = document.getElementById("polarity");
   const subjectivityElement = document.getElementById("subjectivity");
   const polarityConfidenceElement = document.getElementById(
@@ -53,6 +54,6 @@ export const handleSubmit = event => {
       polarityConfidenceElement.innerHTML = polarity_confidence;
       subjectivityConfidenceElement.innerHTML = subjectivity_confidence;
       textElement.innerHTML = text;
-      textElement.setAttribute("cite", formUrlElement);
+      textElement.setAttribute("cite", formUrlElementValue);
     });
 };

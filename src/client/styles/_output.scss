@@ -1,0 +1,13 @@
+.error {
+  color: $error-text-color;
+}
+
+.results {
+  li {
+    margin-bottom: 0.5em;
+
+    strong {
+      color: darken($base-text-accent-color, 20);
+    }
+  }
+}

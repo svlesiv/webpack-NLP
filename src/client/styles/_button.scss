@@ -1,0 +1,3 @@
+button {
+  @include button-template($base-body-color, $base-text-accent-color);
+}
