@@ -1,5 +1,8 @@
+$base-text-color: rgb(38, 38, 37);
+$base-text-accent-color: rgb(15, 128, 162);
+
 form {
-  border: 1px solid #545454;
+  border: 1px solid $base-text-color;
   border-radius: 3px;
   padding: 3em 2em;
 

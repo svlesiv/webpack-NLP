@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,900");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-@import "resets";
-@import "variables";
-@import "mixins";
-@import "form";
-@import "main";
-@import "header";
-@import "footer";
-@import "button";
-@import "output";
+/*color variables*/
+$base-body-color: rgb(252, 252, 250);
+$base-text-color: rgb(38, 38, 37);
+
+/*fonts*/
+$font-family-body: "Raleway Display", Arial, Helvetica, sans-serif;
 
 html {
   box-sizing: border-box;
