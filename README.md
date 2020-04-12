@@ -18,4 +18,4 @@ The goal of this project is to practice with:
   - `yarn start`
 
 - open browser with http://localhost:8080/ to run the app in development mode.
-- open browser with  http://localhost:8080/ to run the app in production mode.
+- open browser with  http://localhost:8081/ to run the app in production mode.
